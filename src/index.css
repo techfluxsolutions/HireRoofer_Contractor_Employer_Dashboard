@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-family: 'Kanit', sans-serif;
+    --primary-color: #537EF1;
+    --white-color:#ffffff;
+  }
+
+  body {
+    font-family: var(--font-family);
+  }
+}
