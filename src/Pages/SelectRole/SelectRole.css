@@ -1,25 +1,3 @@
-.role-page {
-  background-color: var(--primary-color);
-  
-}
-
-/* Left image section */
-.role-left {
-  padding: 40px;
-}
-
-.role-image {
-  max-height: 420px;
-}
-
-/* Right card */
-.role-right {
-  background: #fff;
-  padding: 40px;
-  border-radius: 16px;
-}
-
-/* Card content */
 .role-card-main {
   text-align: center;
 }
@@ -27,30 +5,27 @@
 .logo h2 {
   color: var(--primary-color);
   font-weight: 600;
-  margin-bottom: 4px;
 }
 
 .logo p {
   font-size: 14px;
   color: #777;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
-/* Role options */
 .role-option {
-  display: flex;
+  /* display: flex; */
   gap: 16px;
-  text-align: left;
   border: 1px solid #e0e6ff;
-  padding: 16px;
+  padding: 30px;
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s;
   margin-bottom: 16px;
 }
 
-.role-option:hover,
-.role-option.active {
+.role-option.active,
+.role-option:hover {
   border-color: var(--primary-color);
   background: #f4f7ff;
 }
@@ -60,14 +35,13 @@
   color: var(--primary-color);
 }
 
-.role-option h5 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
+.role-title{
+    font-size: 25px;
+    color: black;
 }
 
-.role-option p {
-  margin-top: 4px;
-  font-size: 13px;
-  color: #666;
+.icon{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
 }
