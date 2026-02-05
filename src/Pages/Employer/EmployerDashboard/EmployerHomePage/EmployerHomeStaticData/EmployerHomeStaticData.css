@@ -1,7 +1,6 @@
-/* Card */
 .EmployerHomeStatic-card {
-  background-color: #f1f1f1;
-  border-radius: 12px;
+  background-color:#EBEBEB;
+  border-radius: 9px;
   height: 80px;
   width: 100%;
   padding: 16px 18px;
@@ -14,40 +13,43 @@
 }
 
 .EmployerHomeStatic-card:hover {
-  background-color: #eaeaea;
+  background-color: #d3d2d2 !important;
 }
 
-/* Icon */
+/* Image wrapper */
 .EmployerHomeStatic-icon {
-  color: #2563eb;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Text Wrapper */
+/* Image */
+.EmployerHomeStatic-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Text */
 .EmployerHomeStatic-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Title */
 .EmployerHomeStatic-title {
   font-size: 14px;
   font-weight: 500;
   color: #333;
-  line-height: 1.2;
 }
 
-/* Value */
 .EmployerHomeStatic-value {
   font-size: 15px;
   font-weight: 600;
   color: #000;
 }
 
-/* Responsive Fix */
+/* Mobile fix */
 @media (max-width: 576px) {
   .EmployerHomeStatic-card {
     height: 80px;

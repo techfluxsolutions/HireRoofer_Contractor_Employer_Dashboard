@@ -1,0 +1,74 @@
+.available-contractors-container {
+  padding: 20px;
+}
+
+.contractor-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Grid */
+.contractors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.contractor-card {
+  display: flex;
+  gap: 15px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Initial Circle */
+.contractor-initials {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #4a67c6;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Details */
+.contractor-details h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.job-title {
+  font-size: 13px;
+  color: #666;
+}
+
+.location-category {
+  font-size: 12px;
+  color: #888;
+}
+
+.rating {
+  font-size: 13px;
+  color: #f5a623;
+}
+
+/* View All Bottom Right */
+.view-all-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.view-all {
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+}

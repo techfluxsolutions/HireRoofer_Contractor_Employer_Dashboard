@@ -251,18 +251,19 @@
 
 
 
-import React from 'react'
-import EmployerHomeStaticData from './EmployerHomeStaticData/EmployerHomeStaticData'
-import EmployerHomeActiveJobs from './EmployerHomeActiveJobs/EmployerHomeActiveJobs'
-import EmployerHomeAvailableContractors from './EmployerHomeAvailableContractors/EmployerHomeAvailableContractors'
-import EmployerCompleteYourProfile from './EmployerCompleteYourProfile/EmployerCompleteYourProfile'
+import React from 'react';
+import EmployerHomeStaticData from './EmployerHomeStaticData/EmployerHomeStaticData';
+import EmployerHomeActiveJobs from './EmployerHomeActiveJobs/EmployerHomeActiveJobs';
+import EmployerHomeAvailableContractors from './EmployerHomeAvailableContractors/EmployerHomeAvailableContractors';
+import EmployerCompleteYourProfile from './EmployerCompleteYourProfile/EmployerCompleteYourProfile';
+import './EmployerHomePage.css';
 
 const EmployerHomePage = () => {
   return (
-    <div className='container mt-5'>
+    <div className='container '>
       <div className='row'>
          
-      <div className='col-12 col-md-8'>
+      <div className='EmployerHomePageMainclass col-12 col-md-8'>
      <EmployerHomeStaticData/>
      <EmployerHomeActiveJobs/>
      <EmployerHomeAvailableContractors/>
