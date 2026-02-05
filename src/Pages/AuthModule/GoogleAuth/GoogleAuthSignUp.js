@@ -190,45 +190,28 @@ export default function GoogleAuthSignUp({ auth, provider }) {
   };
 
   return (
-    <div className="card p-4 shadow-sm" style={{ maxWidth: "420px" }}>
-      <h5 className="mb-3">Sign Up with Google</h5>
+    <div className="google-login-wrapper">
+    <div className="p-4 login-form" >
+      <h5 className="mb-3 text-center">Sign Up with Google</h5>
 
       {error && <div className="alert alert-danger py-2">{error}</div>}
-
-      <button
-        onClick={handleGoogleSignIn}
-        className="btn btn-primary w-100"
-        disabled={loading}
-      >
-        {loading ? "Loading..." : "Sign Up with Google"}
-      </button>
-
-      {/* {user && (
-        <div className="d-flex align-items-center mt-3">
-          {user.picture && (
+         <div className="google-btn-div">
+           <button
+             onClick={handleGoogleSignIn}
+             className=" shadow-sm  google-btn"
+             disabled={loading}
+           >
             <img
-              src={user.picture}
-              className="rounded-circle me-3"
-              alt="avatar"
-              width="48"
-              height="48"
-            />
-          )}
+                  src="/AuthModuleImages/google.png"
+                  alt="logo"
+                  className="google-img"
+                 
+                />
+           </button>
+         </div>    
 
-          <div>
-            <strong>{user.name}</strong>
-            <div className="text-muted">{user.email}</div>
-          </div>
-
-          <button
-            onClick={handleSignOut}
-            disabled={loading}
-            className="btn btn-outline-secondary ms-auto"
-          >
-            {loading ? "Signing out..." : "Sign out"}
-          </button>
-        </div>
-      )} */}
+     
+    </div>
     </div>
   );
 }

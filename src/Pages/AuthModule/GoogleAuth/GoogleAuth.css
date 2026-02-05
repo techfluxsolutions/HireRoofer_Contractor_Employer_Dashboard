@@ -1,0 +1,10 @@
+.google-btn-div{
+    display: flex;
+    justify-content: center;
+}
+.google-btn{
+    height:auto;
+    width: 30px;
+    border-radius: 50%;
+    
+}

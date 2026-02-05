@@ -43,7 +43,7 @@ const SelectRole = () => {
         }}
       >
         {/* Left image */}
-        <div className="d-md-flex col-md-3 align-items-center justify-content-center p-4">
+        <div className="d-flex col-md-3 align-items-center justify-content-center p-4">
           <img
             src="/AuthModuleImages/RooferMan.png"
             alt="Roofer"
@@ -54,7 +54,7 @@ const SelectRole = () => {
 
         {/* Right white card */}
         <div className="col-12 col-md-9 d-flex justify-content-center p-3 p-sm-4 p-md-5 ">
-          <div className="role-card-main w-100 bg-white p-4 p-sm-5 rounded-4">
+          <div className="role-card-main w-100 w-md-75 bg-white p-4 p-sm-5 rounded-4">
             <div className="logo d-flex justify-content-center">
               <img
                 src="/AuthModuleImages/logo.png"

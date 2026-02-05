@@ -8,7 +8,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { encryptData } from "../../../utils/CRYPTO/cryptoFunction";
-
+import Loader from "../../../Loader/Loader";
+import "./GoogleAuth.css"
 export default function GoogleAuth({ auth, provider }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -65,24 +66,7 @@ export default function GoogleAuth({ auth, provider }) {
       const startStep = parseMissingToStep(onboarding.currentStep);
       sessionStorage.setItem("startStep", startStep);
 
-      // 🚦 SINGLE SOURCE OF REDIRECT
-      // if (!onboarding.completed) {
-      //   navigate(
-      //     role === "employer" ? "/employer-stepper" : "/contractor-stepper",
-      //     { replace: true, state: { startStep } }
-      //   );
-      //   return;
-      // }
 
-      // if (!onboarding.isApproved) {
-      //   navigate(
-      //     role === "employer"
-      //       ? "/employer-verified"
-      //       : "/contractor-verified",
-      //     { replace: true }
-      //   );
-      //   return;
-      // }
 
       navigate(
         role === "employer"
@@ -97,46 +81,35 @@ export default function GoogleAuth({ auth, provider }) {
     }
   };
 
+  if(loading){
+    return<Loader/>
+  }
+
    return (
-    <div className="card p-4 shadow-sm" style={{ maxWidth: "420px" }}>
-      <h5 className="mb-3">Sign in with Google</h5>
+    <div className="google-login-wrapper">
+    <div className="p-4 login-form" >
+      <h5 className="mb-3 text-center">Sign in with Google</h5>
 
       {error && <div className="alert alert-danger py-2">{error}</div>}
-
-      <button
-        onClick={handleGoogleSignIn}
-        className="btn btn-primary w-100"
-        disabled={loading}
-      >
-        {loading ? "Loading..." : "Sign In with Google"}
-      </button>
-
-      {/* {user && (
-        <div className="d-flex align-items-center mt-3">
-          {user.picture && (
+         <div className="google-btn-div">
+           <button
+             onClick={handleGoogleSignIn}
+             className=" shadow-sm  google-btn"
+             disabled={loading}
+           >
             <img
-              src={user.picture}
-              className="rounded-circle me-3"
-              alt="avatar"
-              width="48"
-              height="48"
-            />
-          )}
+                  src="/AuthModuleImages/google.png"
+                  alt="logo"
+                  className="google-img"
+                  // style={{ height: '50px', width: '50px' }}
+                />
 
-          <div>
-            <strong>{user.name}</strong>
-            <div className="text-muted">{user.email}</div>
-          </div>
+             {/* {loading ? "Loading..." : "Sign In with Google"} */}
+           </button>
+         </div>    
 
-          <button
-            onClick={handleSignOut}
-            disabled={loading}
-            className="btn btn-outline-secondary ms-auto"
-          >
-            {loading ? "Signing out..." : "Sign out"}
-          </button>
-        </div>
-      )} */}
+     
+    </div>
     </div>
   );
 }
