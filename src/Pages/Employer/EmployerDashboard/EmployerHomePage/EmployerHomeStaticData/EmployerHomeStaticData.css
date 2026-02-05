@@ -1,0 +1,55 @@
+/* Card */
+.EmployerHomeStatic-card {
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  height: 80px;
+  width: 100%;
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  transition: background 0.3s ease;
+}
+
+.EmployerHomeStatic-card:hover {
+  background-color: #eaeaea;
+}
+
+/* Icon */
+.EmployerHomeStatic-icon {
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text Wrapper */
+.EmployerHomeStatic-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.EmployerHomeStatic-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.2;
+}
+
+/* Value */
+.EmployerHomeStatic-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Responsive Fix */
+@media (max-width: 576px) {
+  .EmployerHomeStatic-card {
+    height: 80px;
+  }
+}
