@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX, HiBell, HiUserCircle } from "react-icons/hi";
+import { PiBellBold } from "react-icons/pi";
+
 
 const EmployerNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,8 +11,8 @@ const EmployerNavbar = () => {
     { name: "Home", path: "/employer-dashboard/home" },
     { name: "My Jobs", path: "/employer-dashboard/jobs" },
     { name: "My Projects", path: "/employer-dashboard/projects" },
-    { name: "View Roofer", path: "/employer-dashboard/view-roofer" },
     { name: "Chat", path: "/chat" },
+    { name: "View Roofer", path: "/employer-dashboard/view-roofer" }, 
   ];
 
   return (
@@ -25,7 +27,27 @@ const EmployerNavbar = () => {
             <img src="./assets/logo.png" alt="Hire Roofer" className="h-[5rem] w-auto" />
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu
+          <div className="hidden md:flex items-center space-x-10">
+            {navLinks.map((link) => (
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `text-lg font-semibold transition-colors ${isActive
+                    ? "text-blue-600"
+                    : "text-gray-800 hover:text-blue-600"
+                  }`
+                }
+              >
+                {link.name}
+              </NavLink>
+
+            ))}
+          </div> */}
+
+          {/* Right Icons */}
+          <div className="hidden md:flex items-center gap-6">
+              {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <NavLink
@@ -42,11 +64,8 @@ const EmployerNavbar = () => {
 
             ))}
           </div>
-
-          {/* Right Icons */}
-          <div className="hidden md:flex items-center gap-6">
             <button className="relative p-2 hover:bg-gray-100 rounded-full">
-              <HiBell className="h-6 w-6 text-gray-700" />
+              <PiBellBold className="h-6 w-6 text-gray-700" />
               <span className="absolute top-2 right-2 h-2 w-2 bg-red-500 rounded-full ring-2 ring-white"></span>
             </button>
 

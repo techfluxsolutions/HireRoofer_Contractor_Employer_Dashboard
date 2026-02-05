@@ -145,14 +145,14 @@ export default function EmployerHomePage() {
               </h3> */}
 
               <div className="flex items-center gap-3 mb-3">
-  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
-    <Wrench className="text-white" size={18} />
-  </div>
+            <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
+              <Wrench className="text-white" size={18} />
+            </div>
 
-  <h3 className="font-medium text-sm text-gray-900 truncate">
-    {job.jobName}
-  </h3>
-</div>
+            <h3 className="font-medium text-sm text-gray-900 truncate">
+              {job.jobName}
+            </h3>
+          </div>
 
 
               <div className="text-xs text-gray-500 space-y-1">
