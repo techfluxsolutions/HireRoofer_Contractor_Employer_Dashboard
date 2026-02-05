@@ -33,57 +33,83 @@ const SelectRole = () => {
   if (loading) return <Loader />;
 
   return (
-   <div
-  className="min-h-[calc(100vh-2.5rem)] m-5 flex items-center justify-center"
-  style={{ backgroundColor: 'var(--primary-color)' }}
->
-  <div className="w-full max-w-6xl">
-    <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+    <div className="min-vh-100 d-flex align-items-center justify-content-center bg-white p-3 p-sm-4">
+      {/* Blue wrapper */}
+      <div
+        className="container-xl rounded-4 overflow-hidden d-flex flex-column flex-md-row"
+        style={{
+          backgroundColor: 'var(--primary-color)',
+          minHeight: '600px',
+        }}
+      >
+        {/* Left image */}
+        <div className="d-md-flex col-md-3 align-items-center justify-content-center p-4">
+          <img
+            src="/AuthModuleImages/RooferMan.png"
+            alt="Roofer"
+            className=""
+            style={{ maxHeight: '700px' }}
+          />
+        </div>
 
-      {/* Left Image */}
-      <div className="w-full md:w-1/2 flex justify-center items-center role-left">
-        <img
-          src="/images/roofer.png"
-          alt="Roofer"
-          className="role-image w-full max-w-md"
-        />
-      </div>
-
-      {/* Right Content */}
-      <div className="w-full md:w-1/3 role-right">
-        <div className="role-card-main">
-          <div className="logo text-center">
-            <h2>Hire Roofer</h2>
-            <p>Connecting Roofers & Professionals</p>
-          </div>
-
-          <div
-            className="role-option active"
-            onClick={() => handleRoleSelect('worker')}
-          >
-            <div className="icon">🛠️</div>
-            <div>
-              <h5>Roofer / Contractor</h5>
-              <p>Create a profile to find work opportunities and get hired</p>
+        {/* Right white card */}
+        <div className="col-12 col-md-9 d-flex justify-content-center p-3 p-sm-4 p-md-5 ">
+          <div className="role-card-main w-100 bg-white p-4 p-sm-5 rounded-4">
+            <div className="logo d-flex justify-content-center">
+              <img
+                src="/AuthModuleImages/logo.png"
+                alt="logo"
+                className="img-fluid"
+                style={{ height: '150px', width: '300px' }}
+              />
+              {/* <h2>Hire Roofer</h2> */}
+              {/* <p>Connecting Roofers & Professionals</p> */}
             </div>
-          </div>
 
-          <div
-            className="role-option"
-            onClick={() => handleRoleSelect('employer')}
-          >
-            <div className="icon">🏢</div>
-            <div>
-              <h5>Company / Employer</h5>
-              <p>Search and hire skilled roofers for your projects</p>
+            <div
+              className="role-option active"
+              onClick={() => handleRoleSelect('worker')}
+            >
+              <div className="icon">
+                <img
+                  src="/AuthModuleImages/contractorRole.png"
+                  alt="logo"
+                  className="img-fluid"
+                  style={{ height: '50px', width: '50px' }}
+                />
+                <p><strong className='role-title'>Contractor</strong></p>
+                
+              </div>
+              <div>
+                
+                <p>Create a profile to find work opportunities and get hired</p>
+              </div>
+            </div>
+
+            <div
+              className="role-option"
+              onClick={() => handleRoleSelect('employer')}
+            >
+              <div className="icon">
+                <img
+                  src="/AuthModuleImages/employerRole.png"
+                  alt="logo"
+                  className="img-fluid"
+                  style={{ height: '50px', width: '50px' }}
+                />
+                 <p><strong className='role-title'>Employer</strong></p>
+              </div>
+              <div>
+                {/* <h5>Company / Employer</h5> */}
+                <p>Search and hire skilled roofers for your projects</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
-</div>
+
+
 
   );
 };
