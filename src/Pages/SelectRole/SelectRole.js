@@ -47,8 +47,8 @@ const SelectRole = () => {
           <img
             src="/AuthModuleImages/RooferMan.png"
             alt="Roofer"
-            className=""
-            style={{ maxHeight: '700px' }}
+            className="roofer-img"
+            style={{ maxHeight: '600px' }}
           />
         </div>
 
