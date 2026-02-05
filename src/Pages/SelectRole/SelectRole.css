@@ -24,7 +24,7 @@
   margin-bottom: 16px;
 }
 
-.role-option.active,
+/* .role-option.active, */
 .role-option:hover {
   border-color: var(--primary-color);
   background: #f4f7ff;

@@ -1,0 +1,16 @@
+.otp-input {
+  width: 50px !important;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 6px; /* change to 0 if you want sharp square */
+  text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+ .otp-input {
+     width: 35px !important;
+  height: 35px;
+}
+}
