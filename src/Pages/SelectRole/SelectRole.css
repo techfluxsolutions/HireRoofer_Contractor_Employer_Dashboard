@@ -45,3 +45,11 @@
     justify-content: center;
     gap: 25px;
 }
+.roofer-img{
+  max-width: none !important;
+}
+@media (max-width: 768px) {
+  .roofer-img {
+    max-width: 100% !important;
+  }
+}
