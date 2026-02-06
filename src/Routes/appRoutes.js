@@ -32,6 +32,7 @@ import ViewPerticularJob from "../Pages/Employer/EmployerDashboard/EmployerMyJob
 import ViewPerticularRoofer from "../Pages/Employer/EmployerDashboard/EmployerViewRoofers/ViewPerticularRoofer/ViewPerticularRoofer";
 import { decryptData } from "../utils/CRYPTO/cryptoFunction";
 import { getAccessToken } from "../utils/APIs/commonHeadApiLogic";
+import WorkerLayout from "../Template/Layout/WorkerLayout";
 
 // import ScrollToTop from "./../utils/scrollToTop/ScrollToTop";
 // import InternetChecker from "./../utils/InternetChecker/InternetChecker";
@@ -178,6 +179,7 @@ console.log("GET ACCESS TOKEN",myToken)
           />
 
           {/* ================= WORKER / CONTRACTOR ROUTES ================= */}
+         
           <Route
             path="/contractor-stepper"
             element={
@@ -195,15 +197,14 @@ console.log("GET ACCESS TOKEN",myToken)
               </RoleProtectedRoute>
             }
           />
-
           <Route
             path="/contractor-dashboard"
             element={
               <RoleProtectedRoute allowedRoles={["worker"]}>
-                <WorkerDashboard />
+                <WorkerLayout />
               </RoleProtectedRoute>
-            }
-          />
+            } />
+          
 
           {/* ================= SHARED ROUTES ================= */}
           <Route
