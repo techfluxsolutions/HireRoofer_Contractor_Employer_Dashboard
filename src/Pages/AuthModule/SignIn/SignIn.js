@@ -67,7 +67,7 @@ const SignIn = () => {
         }}
       >
         {/* Left image */}
-        <div className="d-flex flex-col  col-md-4 align-items-center justify-content-center p-4">
+        <div className="d-flex flex-col  col-md-4 align-items-center justify-content-center p-4 ">
           <img
             src="/AuthModuleImages/RooferMan.png"
             alt="Roofer"

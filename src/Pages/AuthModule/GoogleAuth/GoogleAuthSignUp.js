@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from "react";
 import {
   signInWithPopup,
@@ -9,6 +7,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { encryptData } from "../../../utils/CRYPTO/cryptoFunction";
+import { getFcmToken } from "../../../Firebase/getFcmToken";
 
 export default function GoogleAuthSignUp({ auth, provider }) {
   const [user, setUser] = useState(null);
@@ -62,12 +61,16 @@ export default function GoogleAuthSignUp({ auth, provider }) {
       // Step 2: Get Firebase ID token
       const idToken = await fbUser?.getIdToken();
       console.log("ID TOKEN",idToken)
+      const fcmToken = await getFcmToken();
+                 console.log("FCM TOKEN",fcmToken)
+      
 
       // Step 3: Send ID token to your backend for verification
       const response = await axios.post(
       `  ${API_URL}/api/auth/google/register`,
         { idToken ,
-            "role" : sessionStorage.getItem("userRole")
+            "role" : sessionStorage.getItem("userRole"),
+            fcmToken
         },
         {
           headers: {
@@ -114,24 +117,6 @@ export default function GoogleAuthSignUp({ auth, provider }) {
       const startStep = parseMissingToStep(onboarding.currentStep);
       sessionStorage.setItem("startStep", startStep);
 
-      // 🚦 SINGLE SOURCE OF REDIRECT
-      // if (!onboarding.completed) {
-      //   navigate(
-      //     role === "employer" ? "/employer-stepper" : "/contractor-stepper",
-      //     { replace: true, state: { startStep } }
-      //   );
-      //   return;
-      // }
-
-      // if (!onboarding.isApproved) {
-      //   navigate(
-      //     role === "employer"
-      //       ? "/employer-verified"
-      //       : "/contractor-verified",
-      //     { replace: true }
-      //   );
-      //   return;
-      // }
 
       navigate(
         role === "employer"

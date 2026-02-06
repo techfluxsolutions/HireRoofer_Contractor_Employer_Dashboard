@@ -10,6 +10,7 @@ import axios from "axios";
 import { encryptData } from "../../../utils/CRYPTO/cryptoFunction";
 import Loader from "../../../Loader/Loader";
 import "./GoogleAuth.css"
+import { getFcmToken } from "../../../Firebase/getFcmToken";
 export default function GoogleAuth({ auth, provider }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -37,12 +38,14 @@ export default function GoogleAuth({ auth, provider }) {
       const result = await signInWithPopup(auth, provider);
       const fbUser = result.user;
       const idToken = await fbUser.getIdToken();
+       const fcmToken = await getFcmToken();
+           console.log("FCM TOKEN",fcmToken)
 
       const role = sessionStorage.getItem("userRole");
 
       const { data } = await axios.post(
         `${API_URL}/api/auth/google/login`,
-        { idToken, role },
+        { idToken, role,fcmToken },
         {
           headers: {
             "Content-Type": "application/json",

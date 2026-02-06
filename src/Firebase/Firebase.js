@@ -4,6 +4,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
+import { getMessaging } from "firebase/messaging";
 
 // Build the config from env vars (these are injected at build/start time)
 const firebaseConfig = {
@@ -39,4 +40,8 @@ try {
 
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
+
+export const messaging =
+  typeof window !== "undefined" ? getMessaging(app) : null;
+
 export default app;

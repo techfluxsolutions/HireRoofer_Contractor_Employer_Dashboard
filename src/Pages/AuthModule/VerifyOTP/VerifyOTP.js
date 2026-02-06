@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../../../Loader/Loader";
 import { encryptData } from "../../../utils/CRYPTO/cryptoFunction";
 import "./VerifyOTP.css"
+import { getFcmToken } from "../../../Firebase/getFcmToken";
 // Example: import { VerifyOTPAPI } from "../utils/APIs/auth"; 
 
 const VerifyOTP = ({  apiFn = VerifyOTPAPI }) => {
@@ -67,11 +68,14 @@ const handleVerify = async (e) => {
     if (otpString.length !== 6 || !/^\d{6}$/.test(otpString)) {
       throw new Error("OTP must be 6 digits");
     }
+     const fcmToken = await getFcmToken();
+     console.log("FCM TOKEN",fcmToken)
 
     const payload = {
       otp: otpString,
       email: sessionStorage.getItem("email"),
-      role: sessionStorage.getItem("userRole")
+      role: sessionStorage.getItem("userRole"),
+      fcmToken:fcmToken  ,
     };
 
     const response = await apiFn(payload);
@@ -178,7 +182,7 @@ const handleVerify = async (e) => {
       <img
         src="/AuthModuleImages/RooferMan.png"
         alt="Roofer"
-        className="img-fluid mb-3"
+        className="roofer-img img-fluid mb-3"
         style={{ maxHeight: "500px" }}
       />
       <div className="text-center roofer-img-text text-white">
