@@ -10,9 +10,9 @@ const WorkerNavbar = () => {
   const navLinks = [
     { name: "Home", path: "/employer-dashboard/home" },
     { name: "Jobs Request", path: "/employer-dashboard/jobs" },
-    // { name: "My Projects", path: "/employer-dashboard/projects" },
+    { name: "My Projects", path: "/employer-dashboard/projects" },
     { name: "Chat", path: "/chat" },
-    { name: "View Roofer", path: "/employer-dashboard/view-roofer" }, 
+    // { name: "View Roofer", path: "/employer-dashboard/view-roofer" }, 
   ];
 
   return (
