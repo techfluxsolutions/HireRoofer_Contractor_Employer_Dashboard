@@ -33,6 +33,8 @@ import ViewPerticularRoofer from "../Pages/Employer/EmployerDashboard/EmployerVi
 import { decryptData } from "../utils/CRYPTO/cryptoFunction";
 import { getAccessToken } from "../utils/APIs/commonHeadApiLogic";
 import WorkerLayout from "../Template/Layout/WorkerLayout";
+import EmployerProfile from "../Pages/Employer/EmployerProfile/EmployerProfile";
+import ContractorProfile from "../Pages/Worker/ContractorProfile/ContractorProfile";
 
 // import ScrollToTop from "./../utils/scrollToTop/ScrollToTop";
 // import InternetChecker from "./../utils/InternetChecker/InternetChecker";
@@ -119,18 +121,8 @@ console.log("GET ACCESS TOKEN",myToken)
             }
           />
 
-          {/* <Route
-            path="/employer-dashboard"
-            element={
-              <RoleProtectedRoute allowedRoles={["employer"]}>
-                <EmployerNavbar />
-                <EmployerDashboard />
-                <EmployerHomePage/>
-              </RoleProtectedRoute>
-            }
-          /> */}
-
-          <Route
+   
+<Route
   path="/employer-dashboard"
   element={
     <RoleProtectedRoute allowedRoles={["employer"]}>
@@ -138,26 +130,17 @@ console.log("GET ACCESS TOKEN",myToken)
     </RoleProtectedRoute>
   }
 >
-  {/* HOME */}
   <Route index element={<EmployerHomePage />} />
   <Route path="home" element={<EmployerHomePage />} />
-
-
-  {/* OTHER PAGES */}
-  <Route path="jobs" element={<EmployerMyJobs/>} />
-   <Route path="jobs/add-job" element={<EmployerAddJob />} />
-   <Route path="/employer-dashboard/jobs/view/:id" element={<ViewPerticularJob />}/>
-
-   
-
-  <Route path="projects" element={<EmployerMyProjects/>} />
-
-
-  <Route path="view-roofer" element={<EmployerViewRoofers/>} />
-  <Route path="/employer-dashboard/view-roofer/roofers/:id" element={<ViewPerticularRoofer />}/>
-  
-  {/* <Route path="projects" element={<EmployerProjects />} /> */}
+  <Route path="jobs" element={<EmployerMyJobs />} />
+  <Route path="jobs/add-job" element={<EmployerAddJob />} />
+  <Route path="jobs/view/:id" element={<ViewPerticularJob />} />
+  <Route path="projects" element={<EmployerMyProjects />} />
+  <Route path="view-roofer" element={<EmployerViewRoofers />} />
+  <Route path="view-roofer/roofers/:id" element={<ViewPerticularRoofer />} />
+  <Route path="employer-profile" element={<EmployerProfile />} />
 </Route>
+
 
 
           <Route
@@ -203,7 +186,11 @@ console.log("GET ACCESS TOKEN",myToken)
               <RoleProtectedRoute allowedRoles={["worker"]}>
                 <WorkerLayout />
               </RoleProtectedRoute>
-            } />
+            } >
+            <Route path="contractor-profile" element={<ContractorProfile/>} />
+
+            </Route>
+
           
 
           {/* ================= SHARED ROUTES ================= */}
