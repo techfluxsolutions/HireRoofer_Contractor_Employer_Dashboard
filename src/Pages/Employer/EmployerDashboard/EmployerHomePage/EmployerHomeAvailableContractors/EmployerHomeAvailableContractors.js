@@ -1,5 +1,6 @@
 import React from "react";
 import "./EmployerHomeAvailableContractors.css";
+import { useNavigate } from "react-router-dom";
 
 const contractorsData = [
   { id: 1, name: "Robert James", job: "Contract Work Needed", location: "Sydney", category: "Contracting", rating: 2.0, initials: "RJ" },
@@ -9,6 +10,8 @@ const contractorsData = [
 ];
 
 const EmployerHomeAvailableContractors = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="available-contractors-container">
 
@@ -38,8 +41,9 @@ const EmployerHomeAvailableContractors = () => {
       </div>
 
       {/* View All Button */}
-      <div className="view-all-wrapper">
-        <span className="view-all">View All Jobs ›</span>
+      <div className="view-all-wrapper"
+      onClick={() => navigate("/employer-dashboard/view-roofer")}>
+        <span className="view-all">View All Contractors ›</span>
       </div>
 
     </div>

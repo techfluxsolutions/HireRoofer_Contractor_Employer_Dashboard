@@ -76,6 +76,7 @@
 
 import React from "react";
 import "./EmployerHomeActiveJobs.css";
+import { useNavigate } from "react-router-dom";
 
 const EmployerHomeActiveJobs = () => {
   const jobs = [
@@ -86,7 +87,7 @@ const EmployerHomeActiveJobs = () => {
     { name: "Job 5" },
     { name: "Job 6" },
   ];
-
+const navigate = useNavigate();
   return (
     <div className="EmployerHomeActiveJobs-container">
       
@@ -94,7 +95,8 @@ const EmployerHomeActiveJobs = () => {
       <div className="EmployerHomeActiveJobs-header d-flex justify-content-between align-items-center">
         <h5 className="EmployerHomeActiveJobs-title">Active Jobs</h5>
 
-        <button className="EmployerHomeActiveJobs-addBtn">
+        <button className="EmployerHomeActiveJobs-addBtn"
+        onClick={() => navigate("/employer-dashboard/jobs/add-job")}>
           + Add Job
         </button>
       </div>

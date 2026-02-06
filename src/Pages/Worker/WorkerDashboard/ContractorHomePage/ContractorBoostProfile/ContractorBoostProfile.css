@@ -1,0 +1,70 @@
+.contractorBoostProfile-container {
+  position: relative;
+  padding: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    #3251AF 0%,
+    #4169E2 50%,
+    #243A7C 100%
+  );
+
+  color: white;
+}
+
+/* Text Content */
+.contractorBoostProfile-content {
+  max-width: 60%;
+}
+
+/* Title */
+.contractorBoostProfile-title {
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-size: 42px;
+}
+
+/* Subtitle */
+.contractorBoostProfile-subtitle {
+  opacity: 0.9;
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* Button */
+.contractorBoostProfile-btn {
+  background: linear-gradient(90deg, #FCCD0E, #F4DC7D);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ⭐ RIGHT SIDE IMAGE */
+.contractorBoostProfile-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 170px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+  .contractorBoostProfile-content {
+    max-width: 100%;
+  }
+
+  .contractorBoostProfile-icon {
+    position: static;
+    display: block;
+    margin: 20px auto 0;
+    height: 100px;
+  }
+
+}

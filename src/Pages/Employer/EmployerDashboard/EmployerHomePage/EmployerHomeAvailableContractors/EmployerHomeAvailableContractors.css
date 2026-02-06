@@ -30,7 +30,7 @@
   width: 45px;
   height: 45px;
   border-radius: 10px;
-  background: #4a67c6;
+  background: var(--primary-color);
   color: #fff;
   display: flex;
   align-items: center;
@@ -71,4 +71,19 @@
   font-size: 14px;
   color: #777;
   cursor: pointer;
+}
+.contractor-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap; /* Keeps everything in one line */
+}
+
+.EmployerHomeActiveJobs-infoIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.info-text {
+  margin-right: 12px;
 }
