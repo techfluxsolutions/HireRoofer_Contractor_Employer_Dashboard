@@ -1,7 +1,7 @@
 import React from "react";
-import "./ContractorBoostProfile.css";
+import "./ContractorHomeBoostProfile.css";
 
-const ContractorBoostProfile = () => {
+const ContractorHomeBoostProfile = () => {
   return (
     <div className="contractorBoostProfile-container">
 
@@ -30,4 +30,4 @@ const ContractorBoostProfile = () => {
   );
 };
 
-export default ContractorBoostProfile;
+export default ContractorHomeBoostProfile;

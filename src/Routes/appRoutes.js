@@ -35,6 +35,7 @@ import { getAccessToken } from "../utils/APIs/commonHeadApiLogic";
 import WorkerLayout from "../Template/Layout/WorkerLayout";
 import EmployerProfile from "../Pages/Employer/EmployerProfile/EmployerProfile";
 import ContractorProfile from "../Pages/Worker/ContractorProfile/ContractorProfile";
+import ContractorHomePage from "../Pages/Worker/WorkerDashboard/ContractorHomePage/ContractorHomePage";
 
 // import ScrollToTop from "./../utils/scrollToTop/ScrollToTop";
 // import InternetChecker from "./../utils/InternetChecker/InternetChecker";
@@ -188,6 +189,9 @@ console.log("GET ACCESS TOKEN",myToken)
               </RoleProtectedRoute>
             } >
             <Route path="contractor-profile" element={<ContractorProfile/>} />
+             {/* HOME */}
+            <Route index element={<ContractorHomePage />} />
+            <Route path="home" element={<ContractorHomePage  />} />
 
             </Route>
 

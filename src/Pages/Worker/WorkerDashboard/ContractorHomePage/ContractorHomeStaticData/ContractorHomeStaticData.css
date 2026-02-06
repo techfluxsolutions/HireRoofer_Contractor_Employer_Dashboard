@@ -1,0 +1,57 @@
+.EmployerHomeStatic-card {
+  background-color:#EBEBEB;
+  border-radius: 9px;
+  height: 80px;
+  width: 100%;
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  transition: background 0.3s ease;
+}
+
+.EmployerHomeStatic-card:hover {
+  background-color: #d3d2d2 !important;
+}
+
+/* Image wrapper */
+.EmployerHomeStatic-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
+.EmployerHomeStatic-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Text */
+.EmployerHomeStatic-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.EmployerHomeStatic-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.EmployerHomeStatic-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Mobile fix */
+@media (max-width: 576px) {
+  .EmployerHomeStatic-card {
+    height: 80px;
+  }
+}

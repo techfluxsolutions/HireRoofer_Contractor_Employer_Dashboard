@@ -1,0 +1,72 @@
+.contractorRecent-container {
+  padding: 20px;
+}
+
+.contractorRecent-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+/* List */
+.contractorRecent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Card */
+.contractorRecent-card {
+  background: #f4f4f4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contractorRecent-card:hover {
+  background: #eeeeee;
+}
+
+/* Left Section */
+.contractorRecent-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Icon */
+.contractorRecent-icon {
+  width: 40px;
+  height: 40px;
+  background: #e2e8ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3c5bff;
+  font-size: 16px;
+}
+
+/* Text */
+.contractorRecent-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #1c1c1c;
+}
+
+.contractorRecent-time {
+  font-size: 14px;
+  color: #8b8b8b;
+}
+
+/* Arrow */
+.contractorRecent-arrow {
+  font-size: 20px;
+  color: #9c9c9c;
+}
